@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Nav from './sections/Nav';
+import Footer from './sections/Footer';
 
 type Props = {
     children?: ReactNode;
@@ -67,10 +68,7 @@ const Layout = ({
             <Nav />
         </header>
         {children}
-        <footer>
-            <hr />
-            <span>I'm here to stay (Footer)</span>
-        </footer>
+        <Footer />
     </div>
 );
 
