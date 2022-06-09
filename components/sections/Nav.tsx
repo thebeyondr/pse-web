@@ -59,7 +59,7 @@ const Nav: FunctionComponent = () => {
                         </NextLink>
                     ))}
                 </div>
-                <NextLink href="#">
+                <NextLink href="/">
                     <Image src={pseLogo} alt="pse logo" className="pselogo" />
                 </NextLink>
                 <div className="nav-left flex space-x-4">
@@ -97,7 +97,7 @@ const Nav: FunctionComponent = () => {
                         </NextLink>
                     ))}
                 </div>
-                <NextLink href="#">
+                <NextLink href="/">
                     <Image
                         src={pseLogo}
                         alt="pse logo"
@@ -111,7 +111,7 @@ const Nav: FunctionComponent = () => {
                         className="outline-none font-semibold"
                         onClick={toggleNav}
                     >
-                        Menu
+                        {isOpen ? 'Close' : 'Menu'}
                         <span className="sr-only">Open menu</span>
                     </button>
                     <div
