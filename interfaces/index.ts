@@ -16,3 +16,9 @@ export type Project = {
         discord?: string;
     };
 };
+
+export type NavLink = {
+    label: string;
+    link: string;
+    src?: string;
+};
