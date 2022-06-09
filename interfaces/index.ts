@@ -21,4 +21,5 @@ export type NavLink = {
     label: string;
     link: string;
     src?: string;
+    msg?: string;
 };
