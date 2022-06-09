@@ -1,15 +1,10 @@
-import Link from 'next/link';
 import Layout from '../components/Layout';
+import HomeHero from '../components/sections/HomeHero';
 
-const IndexPage = () => (
+const Home = () => (
     <Layout>
-        <h1 className="text-5xl">Hello Next.js 👋</h1>
-        <p>
-            <Link href="/about">
-                <a>About</a>
-            </Link>
-        </p>
+        <HomeHero />
     </Layout>
 );
 
-export default IndexPage;
+export default Home;
