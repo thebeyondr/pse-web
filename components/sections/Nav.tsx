@@ -49,9 +49,9 @@ const Nav: FunctionComponent = () => {
     const toggleNav = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="justify-between p-4">
+        <nav className="justify-between p-4 border-b-2 border-gray-800 font-semibold">
             {/* Tablet and desktop nav */}
-            <div className="hidden md:flex">
+            <div className="hidden md:flex justify-between items-center">
                 <div className="nav-right flex space-x-4">
                     {navLinksLeft.map(({ label, link }) => (
                         <NextLink href={link}>
