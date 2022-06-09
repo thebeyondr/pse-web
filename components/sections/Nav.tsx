@@ -2,48 +2,14 @@ import Image from 'next/image';
 import NextLink from 'next/link';
 import { FunctionComponent, useState } from 'react';
 import { NavLink } from '../../interfaces';
-
 import pseLogo from '../../public/ui-images/pse-logo.svg';
+import { navLinksLeft, navLinksRight, socialLinks } from '../../utils/navlinks';
 
-const navLinksLeft: NavLink[] = [
-    {
-        label: 'About',
-        link: '#top',
-    },
-    {
-        label: 'Projects',
-        link: '#projects',
-    },
-    {
-        label: 'Team',
-        link: '#team',
-    },
-];
-
-const socialLinks: NavLink[] = [
-    {
-        label: 'Twitter',
-        link: 'https://twitter.com/PrivacyScaling',
-        src: '/ui-images/icons/twitter_round.svg',
-    },
-    {
-        label: 'Discord',
-        link: 'https://discord.gg/g5YTV7HHbh',
-        src: '/ui-images/icons/discord_round.svg',
-    },
-];
-
-const navLinksRight: NavLink[] = [
-    {
-        label: 'Job Openings',
-        link: 'https://jobs.lever.co/ethereumfoundation/?department=Ethereum%20Foundation&team=Privacy%20and%20Scaling%20Explorations',
-    },
-    ...socialLinks,
-];
 const mobileNavLinks: NavLink[] = [...navLinksLeft, ...navLinksRight].filter(
     (link) => !link.src
 );
 
+// TODO: Pass the links as props ye?
 const Nav: FunctionComponent = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleNav = () => setIsOpen(!isOpen);
