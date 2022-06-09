@@ -19,8 +19,8 @@ const Nav: FunctionComponent = () => {
             {/* Tablet and desktop nav */}
             <div className="hidden md:flex justify-between items-center">
                 <div className="nav-right flex space-x-4">
-                    {navLinksLeft.map(({ label, link }) => (
-                        <NextLink href={link}>
+                    {navLinksLeft.map(({ label, link }, index) => (
+                        <NextLink href={link} key={index}>
                             <a>{label}</a>
                         </NextLink>
                     ))}
